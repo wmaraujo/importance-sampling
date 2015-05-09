@@ -1,7 +1,23 @@
 #! /usr/bin/env python3
 
+"""
+Importance sampling simulation to find the probability
+of a standard normal random variable exceeding 8
+P(X > 8), where X is distributed according to the standard normal distribution.
+
+True value is about 6.22096057410^-16
+Obtained with WolframAlpha:
+http://www.wolframalpha.com/input/?i=1+-+CDF[NormalDistribution[0%2C+1]%2C+8]
+Note, it is required to press "more digits" on the WolframAlpha page to
+get better accuracy and precession.
+"""
+
 from random import normalvariate
 from math import exp, sqrt
+
+__author__ = "Wesley Araujo"
+__license__ = "Creative Commons Attribution 4.0"
+"http://creativecommons.org/licenses/by/4.0/"
 
 n = 155000000
 total = 0
